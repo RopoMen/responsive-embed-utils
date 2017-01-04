@@ -1,0 +1,41 @@
+/*
+  Credit: Partly idea is from Bootstrap and thereof Nicolas Gallagher and SUIT CSS.
+*/
+
+@mixin roy-responsive-embed() {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@mixin roy-responsive-item() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@mixin roy-responsive-item-padding($width: 16, $height: 9) {
+	padding-bottom: ($height / $width) * 100%;
+}
+
+@mixin roy-responsive-embed-horizontal-center() {
+  margin-left: auto;
+  margin-right: auto;
+
+  left: 0;
+  right: 0;
+}
+
+@mixin roy-responsive-item-vertical-center($width: 16, $height: 9) {
+	margin-top: -($height / $width) * 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}

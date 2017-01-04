@@ -1,0 +1,47 @@
+/**
+ * roy-responsive-embed-utils - Mixin utils to responsive embedded iframe and video element
+ * @author Markku Roponen <ropooy@gmail.com>
+ * @version v1.0.0
+ * @license MIT
+ */
+/*
+  Credit: Partly idea is from Bootstrap and thereof Nicolas Gallagher and SUIT CSS.
+*/
+.roy-embed .roy-responsive-item, .roy-embed iframe, .roy-embed video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0; }
+
+.roy-embed {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden; }
+  .roy-embed.roy-h-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0; }
+
+.roy-embed-16by9 {
+  padding-bottom: 56.25%; }
+  .roy-embed-16by9.roy-v-center {
+    margin-top: -28.125%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0; }
+
+.roy-embed-4by3 {
+  padding-bottom: 75%; }
+  .roy-embed-4by3.roy-v-center {
+    margin-top: -37.5%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0; }

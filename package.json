@@ -1,0 +1,30 @@
+{
+  "name": "roy-responsive-embed-utils",
+  "description": "Mixin utils to responsive embedded iframe and video element",
+  "version": "1.0.0",
+  "author": "Markku Roponen <ropooy@gmail.com>",
+  "main": "roy-responsive-embed-utils.css",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "sass",
+    "mixin",
+    "responsive",
+    "embed",
+    "video",
+    "iframe"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-serve": "1.4.0",
+    "gulp-header": "1.8.8",
+    "gulp-sass": "3.0.0"
+  }
+}
