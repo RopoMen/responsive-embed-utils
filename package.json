@@ -18,13 +18,12 @@
     "iframe"
   ],
   "scripts": {
-    "build": "gulp build",
-    "test": "gulp test"
+    "build": "gulp build"
   },
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-serve": "1.4.0",
     "gulp-header": "1.8.8",
-    "gulp-sass": "3.0.0"
+    "gulp-sass": "3.0.0",
+    "normalize.css": "5.0.0"
   }
 }

@@ -1,0 +1,21 @@
+.wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.embed-area {
+  position: relative;
+  /* Important for vertical centering! */
+  background-color: lightgray;
+  width: 100%; }
+  .embed-area.embed-area-half .roy-embed {
+    max-width: 50%; }
+  .embed-area.embed-area-block {
+    height: 900px; }
+  .embed-area video {
+    background-color: lightblue; }
+
+.iframe-body {
+  overflow: hidden; }
+  .iframe-body video {
+    max-width: 100%; }

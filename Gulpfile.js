@@ -2,7 +2,6 @@
   'use strict';
 
   var gulp = require('gulp');
-  var serve = require('gulp-serve');
   var sass = require('gulp-sass');
   var header = require('gulp-header');
 
@@ -24,19 +23,23 @@
       .pipe(gulp.dest('./dist'));
   });
 
-  gulp.task('serve', serve('test'));
-
-  gulp.task('sass', function () {
+  gulp.task('sass-main', function () {
     return gulp.src('./sass/**/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('./build'));
   });
 
-  gulp.task('watch', ['serve'], function() {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.task('sass-test', function () {
+    return gulp.src('./test/scss/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./test/css'));
+  });
+
+  gulp.task('watch', function() {
+    gulp.watch(['./sass/**/*.scss', './test/scss/**/*.scss'], ['sass']);
   })
 
-  gulp.task('test', ['serve']);
+  gulp.task('sass', ['sass-main', 'sass-test']);
 
   gulp.task('build', ['sass', 'minify']);
 

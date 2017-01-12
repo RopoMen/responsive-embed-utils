@@ -1,90 +1,82 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
 		<link rel="stylesheet" href="../dist/roy-responsive-embed.css" />
 
-		<style>
-			.wrapper {
-				width: 960px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			.embed-area {
-				position: relative; /* Important for vertical centering! */
-				background-color: lightgray;
-				width: 100%;
-			}
-
-			.embed-area iframe {
-				background-color: lightblue;
-			}
-
-			.embed-area-half .roy-embed {
-				max-width: 50%;
-			}
-
-			.embed-area-block {
-				height: 900px;
-			}
-		</style>
+		<link rel="stylesheet" href="css/test.css" />
 	</head>
 	<body>
 		<div class="wrapper">
 			<h1>Iframe embed with 16:9 aspect ratio</h1>
 			<div class="embed-area">
 				<div class="roy-embed roy-embed-16by9">
-					<iframe src="http://www.youtube.com/watch?v=SGtP0YX34pA"></iframe>
+					<iframe src="test_iframe.html"></iframe>
 				</div>
 			</div>
 		</div>
 
 
 		<div class="wrapper">
-			<h1>Iframe embed with 4:3 aspect ratio</h1>
+			<h1>Video embed with 4:3 aspect ratio</h1>
 			<div class="embed-area">
 				<div class="roy-embed roy-embed-4by3">
-					<iframe src="http://www.youtube.com/watch?v=SGtP0YX34pA"></iframe>
+					<video controls poster="images/768x576_4by3.png">
+						<source src="videos/768x576_4by3.webm" type="video/webm" />
+						<source src="videos/768x576_4by3.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
 		</div>
 
 
 		<div class="wrapper">
-			<h1>Iframe embed with 16:9 aspect ratio, horizontally centered</h1>
+			<h1>Video embed with 16:9 aspect ratio, horizontally centered</h1>
 			<div class="embed-area embed-area-half">
 				<div class="roy-embed roy-embed-16by9 roy-h-center">
-					<iframe src="http://www.youtube.com/watch?v=SGtP0YX34pA"></iframe>
+					<video controls poster="images/1920x1080_16by9.png">
+						<source src="videos/1920x1080_16by9.webm" type="video/webm" />
+						<source src="videos/1920x1080_16by9.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
 		</div>
 
 
 		<div class="wrapper">
-			<h1>Iframe embed with 4:3 aspect ratio, horizontally centered</h1>
+			<h1>Video embed with 4:3 aspect ratio, horizontally centered</h1>
 			<div class="embed-area embed-area-half">
 				<div class="roy-embed roy-embed-4by3 roy-h-center">
-					<iframe src="http://www.youtube.com/watch?v=SGtP0YX34pA"></iframe>
+					<video controls poster="images/768x576_4by3.png">
+						<source src="videos/768x576_4by3.webm" type="video/webm" />
+						<source src="videos/768x576_4by3.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
 		</div>
 
 
 		<div class="wrapper">
-			<h1>Iframe embed with 16:9 aspect ratio, vertically centered</h1>
+			<h1>Video embed with 16:9 aspect ratio, vertically centered</h1>
 			<div class="embed-area embed-area-block">
 				<div class="roy-embed roy-embed-16by9 roy-v-center">
-					<iframe src="http://www.youtube.com/watch?v=SGtP0YX34pA"></iframe>
+					<video controls poster="images/1920x1080_16by9.png">
+						<source src="videos/1920x1080_16by9.webm" type="video/webm" />
+						<source src="videos/1920x1080_16by9.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
 		</div>
 
 
 		<div class="wrapper">
-			<h1>Iframe embed with 16:9 aspect ratio, vertically AND horizontally centered</h1>
+			<h1>Video embed with 16:9 aspect ratio, vertically AND horizontally centered</h1>
 			<div class="embed-area embed-area-block embed-area-half">
 				<div class="roy-embed roy-embed-16by9 roy-v-center roy-h-center">
-					<iframe src="http://www.youtube.com/watch?v=SGtP0YX34pA"></iframe>
+					<video controls poster="images/1920x1080_16by9.png">
+						<source src="videos/1920x1080_16by9.webm" type="video/webm" />
+						<source src="videos/1920x1080_16by9.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
 		</div>
