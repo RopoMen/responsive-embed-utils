@@ -1,4 +1,6 @@
 // used to include default classes. Can be used to import classes to another project and build inside it.
+@import 'roy-include-core';
+
 .roy-embed {
 	@include roy-responsive-embed();
 
