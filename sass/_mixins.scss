@@ -20,8 +20,8 @@
   border: 0;
 }
 
-@mixin roy-responsive-item-padding($width: 16, $height: 9) {
-	padding-bottom: ($height / $width) * 100%;
+@mixin roy-responsive-item-padding($ratio_width: 16, $ratio_height: 9) {
+	padding-bottom: ($ratio_height / $ratio_width) * 100%;
 }
 
 @mixin roy-responsive-embed-horizontal-center() {
@@ -32,10 +32,14 @@
   right: 0;
 }
 
-@mixin roy-responsive-item-vertical-center($width: 16, $height: 9) {
-	margin-top: -($height / $width) * 50%;
+@mixin roy-responsive-item-vertical-center($ratio_width: 16, $ratio_height: 9) {
+	margin-top: -($ratio_height / $ratio_width) * 50%;
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
+}
+
+@mixin roy-adjust-embed-height($ratio_width: 16, $ratio_height: 9, $container_height) {
+  max-width: ($container_height / $ratio_height) * $ratio_width;
 }

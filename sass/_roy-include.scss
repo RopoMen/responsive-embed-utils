@@ -1,3 +1,27 @@
-@import 'variables';
-@import 'mixins';
-@import 'placeholders';
+// used to include default classes. Can be used to import classes to another project and build inside it.
+.roy-embed {
+	@include roy-responsive-embed();
+
+	@each $selector in $roy-responsive-selectors {
+		#{$selector} {
+			@extend %roy-responsive-item;
+		}
+	}
+
+	&.roy-h-center {
+		@include roy-responsive-embed-horizontal-center();
+	}
+}
+
+@each $aspect-ratio in $roy-aspect-ratios {
+	$width: nth($aspect-ratio, 1);
+	$height: nth($aspect-ratio, 2);
+
+	.roy-embed-#{$width}by#{$height} {
+		@include roy-responsive-item-padding($width, $height);
+
+		&.roy-v-center {
+			@include roy-responsive-item-vertical-center($width, $height);
+		}
+	}
+}
