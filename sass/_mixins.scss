@@ -32,8 +32,8 @@
   right: 0;
 }
 
-@mixin roy-responsive-item-vertical-center($ratio_width: 16, $ratio_height: 9) {
-	margin-top: -($ratio_height / $ratio_width) * 50%;
+@mixin roy-responsive-item-vertical-center($container_height: 100%, $ratio_width: 16, $ratio_height: 9) {
+	margin-top: -($ratio_height / $ratio_width) * ($container_height / 2);
   position: absolute;
   top: 50%;
   left: 0;
@@ -41,5 +41,5 @@
 }
 
 @mixin roy-adjust-embed-height($container_height, $ratio_width: 16, $ratio_height: 9) {
-  max-width: ($container_height / $ratio_height) * $ratio_width;
+  max-width: ($ratio_width / $ratio_height) * $container_height;
 }
