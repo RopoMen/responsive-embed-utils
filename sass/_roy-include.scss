@@ -23,7 +23,7 @@
 		@include roy-responsive-item-padding($width, $height);
 
 		&.roy-v-center {
-			@include roy-responsive-item-vertical-center($width, $height);
+			@include roy-responsive-item-vertical-center(100%, $width, $height);
 		}
 	}
 }
