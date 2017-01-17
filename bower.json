@@ -1,0 +1,21 @@
+{
+  "name": "roy-responsive-embed-utils",
+  "main": "css/roy-responsive-embed.scss",
+  "version": "1.0.0",
+  "authors": [
+    "Markku Roponen <ropooy@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RopoMen/responsive-embed-utils.git"
+  },
+  "keywords": [
+    "sass",
+    "mixin",
+    "responsive",
+    "embed",
+    "video",
+    "iframe"
+  ]
+}
