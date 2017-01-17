@@ -33,7 +33,13 @@
 }
 
 @mixin roy-responsive-item-vertical-center($container_height: 100%, $ratio_width: 16, $ratio_height: 9) {
-	margin-top: -($ratio_height / $ratio_width) * ($container_height / 2);
+  @if unit($container_height) == "%" {
+    margin-top: -($ratio_height / $ratio_width) * ($container_height / 2);
+  }
+  @else {
+    margin-top: ($container_height / 2);
+  }
+
   position: absolute;
   top: 50%;
   left: 0;
