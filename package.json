@@ -1,7 +1,7 @@
 {
   "name": "roy-responsive-embed-utils",
   "description": "Mixin utils to responsive embedded iframe and video element",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Markku Roponen <ropooy@gmail.com>",
   "main": "roy-responsive-embed-utils.css",
   "license": "MIT",
