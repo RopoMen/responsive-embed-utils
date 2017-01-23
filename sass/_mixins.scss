@@ -33,12 +33,12 @@
   right: 0;
 }
 
-@mixin roy-responsive-item-vertical-center($container_height: 100%, $ratio_width: 16, $ratio_height: 9) {
+@mixin roy-responsive-item-vertical-center($container_width: 100%, $container_height: 100%, $ratio_width: 16, $ratio_height: 9) {
   @if unit($container_height) == "%" {
     margin-top: -($ratio_height / $ratio_width) * ($container_height / 2);
   }
   @else {
-    margin-top: -($container_height / 2);
+    margin-top: -(get-maximum-embed-height($container_width, $container_height, $ratio_width, $ratio_height) / 2);
   }
 
   position: absolute;
@@ -47,9 +47,9 @@
   right: 0;
 }
 
-@mixin roy-adjust-embed-height($container_height, $ratio_width: 16, $ratio_height: 9) {
-  width: ($ratio_width / $ratio_height) * $container_height;
-  height: $container-height;
+@mixin roy-adjust-embed-height($container_width, $container_height, $ratio_width: 16, $ratio_height: 9) {
+  width: get-maximum-embed-width($container_width, $container_height, $ratio_width, $ratio_height);
+  height: get-maximum-embed-height($container_width, $container_height, $ratio_width, $ratio_height);
 
   /**
     Remove padding based aspect ratio handling and use fixed size embed, because if container is wider,

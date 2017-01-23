@@ -1,0 +1,25 @@
+@function get-maximum-embed-height($container_width, $container_height, $ratio_width: 16, $ratio_height: 9) {
+	$ratio: $ratio_width / $ratio_height;
+	$max_width: $ratio * $container_height;
+  	$max_height: $container_height;
+
+  @if $max_width > $container_width {
+    $max_width: $container_width;
+    $max_height: $container_width / $ratio;
+  }
+
+  @return $max_height;
+}
+
+@function get-maximum-embed-width($container_width, $container_height, $ratio_width: 16, $ratio_height: 9) {
+	$ratio: $ratio_width / $ratio_height;
+	$max_width: $ratio * $container_height;
+  	$max_height: $container_height;
+
+  @if $max_width > $container_width {
+    $max_width: $container_width;
+    $max_height: $container_width / $ratio;
+  }
+
+  @return $max_width;
+}
