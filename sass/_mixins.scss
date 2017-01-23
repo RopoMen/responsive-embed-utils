@@ -48,5 +48,15 @@
 }
 
 @mixin roy-adjust-embed-height($container_height, $ratio_width: 16, $ratio_height: 9) {
-  max-width: ($ratio_width / $ratio_height) * $container_height;
+  width: ($ratio_width / $ratio_height) * $container_height;
+  height: $container-height;
+
+  /**
+    Remove padding based aspect ratio handling and use fixed size embed, because if container is wider,
+    padding is overflowing below the video element and any absolutely positioned element using 'bottom'
+    may drop too low.
+  */
+  padding-bottom: 0px!important;
 }
+
+

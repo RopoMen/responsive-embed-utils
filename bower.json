@@ -1,7 +1,7 @@
 {
   "name": "roy-responsive-embed-utils",
   "main": "css/roy-responsive-embed.scss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "Markku Roponen <ropooy@gmail.com>"
   ],
