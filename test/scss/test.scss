@@ -1,5 +1,10 @@
+@import '../../sass/roy-include-core';
+
+$test-wrapper-width: 960px;
+$test-block-height: 900px;
+
 .wrapper {
-	width: 960px;
+	width: $test-wrapper-width;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -9,14 +14,30 @@
 	background-color: lightgray;
 	width: 100%;
 
-	&.embed-area-half {
-		.roy-embed {
-			max-width: 50%;
+	&.test-embed-half {
+		.roy-embed-16by9 {
+			@include roy-adjust-embed-height($test-wrapper-width / 2, 600px);
+		}
+
+		.roy-embed-4by3 {
+			@include roy-adjust-embed-height($test-wrapper-width / 2, 600px, 4, 3);
+
+			&.roy-v-center {
+				@include roy-responsive-item-vertical-center($test-wrapper-width / 2, 600px, 4, 3);
+			}
 		}
 	}
 
 	&.embed-area-block {
-		height: 900px;
+		height: $test-block-height
+
+		.roy-embed-16by9 {
+			@include roy-adjust-embed-height($test-wrapper-width / 2, $test-block-height);
+
+			&.roy-v-center {
+				@include roy-responsive-item-vertical-center($test-wrapper-width / 2, $test-block-height);
+			}
+		}
 	}
 
 	video {
@@ -24,6 +45,8 @@
 	}
 }
 
+
+// Iframe document styles
 .iframe-body {
 	overflow: hidden;
 

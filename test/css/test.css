@@ -1,3 +1,6 @@
+/*
+  Credit: Partly idea is from Bootstrap and thereof Nicolas Gallagher and SUIT CSS.
+*/
 .wrapper {
   width: 960px;
   margin-left: auto;
@@ -8,8 +11,36 @@
   /* Important for vertical centering! */
   background-color: lightgray;
   width: 100%; }
-  .embed-area.embed-area-half .roy-embed {
-    max-width: 50%; }
+  .embed-area.test-embed-half .roy-embed-16by9 {
+    width: 480px;
+    height: 270px;
+    /**
+    Remove padding based aspect ratio handling and use fixed size embed, because if container is wider,
+    padding is overflowing below the video element and any absolutely positioned element using 'bottom'
+    may drop too low.
+  */
+    padding-bottom: 0px !important; }
+    .embed-area.test-embed-half .roy-embed-16by9.roy-v-center {
+      margin-top: -135px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0; }
+  .embed-area.test-embed-half .roy-embed-4by3 {
+    width: 480px;
+    height: 360px;
+    /**
+    Remove padding based aspect ratio handling and use fixed size embed, because if container is wider,
+    padding is overflowing below the video element and any absolutely positioned element using 'bottom'
+    may drop too low.
+  */
+    padding-bottom: 0px !important; }
+    .embed-area.test-embed-half .roy-embed-4by3.roy-v-center {
+      margin-top: -180px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0; }
   .embed-area.embed-area-block {
     height: 900px; }
   .embed-area video {
